@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import BlogContext from '../context/BlogContext';
 
 const IndexScreen = () => {
   return <View>
@@ -7,8 +8,6 @@ const IndexScreen = () => {
   </View>
 }
 
-const styles = StyleSheet.create({
-
-})
+const styles = StyleSheet.create({})
 
 export default IndexScreen;

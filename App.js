@@ -21,4 +21,9 @@ const App = () => {
   );
 };
 
-export default App;
+
+export default () => {
+  return <BlogProvider>
+    <App />
+  </BlogProvider>
+};
