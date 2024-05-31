@@ -10,10 +10,7 @@ export const BlogProvider = ({ children }) => {
     };
 
 
-// const blogPostz = [
-//     { title: 'Blog Post #1' },
-//     { title: 'Blog Post #2' }
-// ];
+
 
     return <BlogContext.Provider value={{ data: blogPosts, addBlogPost}}>
         {children}
