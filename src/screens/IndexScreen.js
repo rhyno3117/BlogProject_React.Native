@@ -13,8 +13,8 @@ const IndexScreen = () => {
       keyExtractor={(blogPost) => blogPost.title}
       renderItem={({ item }) => {
         return <View style={styles.row}>
-          <Text>{item.title}</Text>
-          <Feather name="trash"/>
+          <Text style={styles.title}>{item.title}</Text>
+          <Feather style={styles.icon} name="trash"/>
         </View>
       }}
     />
@@ -24,7 +24,16 @@ const IndexScreen = () => {
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    paddingVertical: 20,
+    borderTopWidth: 1,
+    borderColor: 'gray',
+  },
+  title: {
+    fontSize: 18
+  },
+  icon: {
+    fontSize: 24
   }
 })
 
