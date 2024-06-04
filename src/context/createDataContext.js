@@ -1,3 +1,6 @@
+// This file is magic, whenever we want to add new resource (images, coments, etc) 
+// we create another context file and define reducer, define functions, then return function then call createDataContext then that it it.
+
 import React, { useReducer } from 'react';
 
 export default (reducer, actions, initialState) => {
