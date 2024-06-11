@@ -17,6 +17,11 @@ const App = () => {
           component={IndexScreen}
           options={{ title: 'Blogs' }}
         />
+          <Stack.Screen
+          name="Show"
+          component={ShowScreen}
+          options={{ title: 'Show Blog' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
