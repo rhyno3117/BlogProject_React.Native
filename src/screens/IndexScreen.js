@@ -15,7 +15,7 @@ const IndexScreen = () => {
         return (
           <View style={styles.row}>
             <Text style={styles.title}>{item.title} - {item.id}</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => console.log(item.id)}>
               <Feather style={styles.icon} name="trash" />
             </TouchableOpacity>
           </View>
