@@ -20,7 +20,7 @@ const App = () => {
           <Stack.Screen
           name="Show"
           component={ShowScreen}
-          options={{ title: 'Show Blog' }}
+          options={{ title: 'Blogs' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
