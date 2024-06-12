@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Context } from '../context/BlogContext';
 
 const ShowScreen = ({ route }) => {
-    const { id } = route.params;
-    console.log(id);
+    const { state } = useContext(Context)
+    // const { id } = route.params;
+    // console.log(id);
 
     return (
         <View>
