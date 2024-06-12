@@ -1,18 +1,15 @@
-import React, { useContext } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useContext, useState } from 'react';
+import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 import { Context } from '../context/BlogContext';
 
-const CreateScreen = ({ route }) => {
-    const { state } = useContext(Context);
+const CreateScreen = ({ navigation }) => {
 
-    const { id } = route.params;
-    const blogPost = state.find((blogPost) => blogPost.id === id);
 
-    return (
-        <View>
-            <Text>Create</Text>
-        </View>
-    );
+  return (
+    <View>
+      <Text>Create Blog</Text>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({});
