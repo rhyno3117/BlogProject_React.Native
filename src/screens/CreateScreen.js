@@ -19,6 +19,7 @@ const CreateScreen = ({ navigation }) => {
                 value={content}
                 onChangeText={(text) => setContent(text)}
             />
+            <Button title="Add Blog Post"/>
         </View>
     );
 };
