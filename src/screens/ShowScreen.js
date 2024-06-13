@@ -1,19 +1,31 @@
 import React, { useContext } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Context } from '../context/BlogContext';
+import { EvilIcons } from '@expo/vector-icons';
 
-const ShowScreen = ({ route }) => {
+const ShowScreen = ({ route, navigation }) => {
     const { state } = useContext(Context);
-
     const { id } = route.params;
     const blogPost = state.find((blogPost) => blogPost.id === id);
+
+    React.useLayoutEffect(() => {
+        navigation.setOptions({
+          headerRight: () => (
+            <TouchableOpacity>
+              <EvilIcons name="pencil" size={35} style={{ marginRight: 10 }} />
+            </TouchableOpacity>
+          ),
+        });
+      }, [navigation]);
 
     return (
         <View>
             <Text>{blogPost.title}</Text>
+            <Text>{blogPost.content}</Text>
         </View>
     );
 };
+
 
 const styles = StyleSheet.create({});
 
