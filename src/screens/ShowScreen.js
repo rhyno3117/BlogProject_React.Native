@@ -10,13 +10,17 @@ const ShowScreen = ({ route, navigation }) => {
 
     React.useLayoutEffect(() => {
         navigation.setOptions({
-          headerRight: () => (
-            <TouchableOpacity onPress={() => navigation.navigate('Edit')}>
-              <EvilIcons name="pencil" size={35} style={{ marginRight: 10 }} />
-            </TouchableOpacity>
-          ),
+            headerRight: () => (
+                <TouchableOpacity
+                    onPress={() =>
+                        navigation.navigate('Edit', { id: navigation.getParam('id') })
+                    }
+                >
+                    <EvilIcons name="pencil" size={35} style={{ marginRight: 10 }} />
+                </TouchableOpacity>
+            ),
         });
-      }, [navigation]);
+    }, [navigation]);
 
     return (
         <View>
