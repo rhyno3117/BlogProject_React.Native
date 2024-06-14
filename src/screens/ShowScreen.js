@@ -12,15 +12,13 @@ const ShowScreen = ({ route, navigation }) => {
         navigation.setOptions({
             headerRight: () => (
                 <TouchableOpacity
-                    onPress={() =>
-                        navigation.navigate('Edit', { id: navigation.getParam('id') })
-                    }
+                    onPress={() => navigation.navigate('Edit', { id })}
                 >
                     <EvilIcons name="pencil" size={35} style={{ marginRight: 10 }} />
                 </TouchableOpacity>
             ),
         });
-    }, [navigation]);
+    }, [navigation, id]);
 
     return (
         <View>
@@ -29,7 +27,6 @@ const ShowScreen = ({ route, navigation }) => {
         </View>
     );
 };
-
 
 const styles = StyleSheet.create({});
 
