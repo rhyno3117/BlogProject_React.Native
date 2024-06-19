@@ -6,15 +6,15 @@ const EditScreen = ({ route }) => {
     const { id } = route.params;
     const { state } = useContext(Context);
 
-    const blogPost = state.find((blogPost) => blogPost.id === navigation.getParam('id')
-    );
+    const blogPost = state.find((blogPost) => blogPost.id === id);
 
     const [title, setTitle] = useState(blogPost.title)
     const [content, setContent] = useState(blogPost.content)
 
     return (
         <View>
-            <Text>Edit Screen - {id}</Text>
+            <Text>Edit Screen:</Text>
+            <TextInput value={title} onChangeText={(newTitle) => setTitle(newTitle)}/>
         </View>
     )
 }
