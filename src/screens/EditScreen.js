@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 import { Context } from '../context/BlogContext';
+import BlogPostForm from '../BlogPostForm';
+
 
 const EditScreen = ({ route }) => {
     const { id } = route.params;
