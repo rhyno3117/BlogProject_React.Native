@@ -41,4 +41,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default BlogPostForm
+export default BlogPostForm;
