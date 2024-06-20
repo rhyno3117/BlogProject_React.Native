@@ -3,8 +3,6 @@ import { StyleSheet } from 'react-native';
 import { Context } from '../context/BlogContext';
 
 const CreateScreen = ({ navigation }) => {
-    const [title, setTitle] = useState('');
-    const [content, setContent] = useState('');
     const { addBlogPost } = useContext(Context);
 };
 
