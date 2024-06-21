@@ -28,8 +28,8 @@ const addBlogPost = (dispatch) => {
 const deleteBlogPost = (dispatch) => {
     return (id) => {
         dispatch({ type: 'delete_blogpost', payload: id })
-    }
-}
+    };
+};
 
 const editBlogPost = (dispatch) => {
     return (id, title, content) => {
