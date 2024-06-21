@@ -16,7 +16,7 @@ const EditScreen = ({ navigation, route }) => {
         onSubmit={(title, content) => {
             editBlogPost(id, title, content, () => navigation.pop());
         }} />
-};
+}; 
 
 const styles = StyleSheet.create({})
 
