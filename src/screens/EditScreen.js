@@ -5,7 +5,7 @@ import BlogPostForm from '../components/BlogPostForm';
 
 
 const EditScreen = ({ navigation, route }) => {
-    console.log(navigation)
+    // console.log(navigation)
     const { id } = route.params;
     const { state, editBlogPost } = useContext(Context);
 
@@ -14,7 +14,7 @@ const EditScreen = ({ navigation, route }) => {
     return <BlogPostForm
         initialValues={{ title: blogPost.title, content: blogPost.content }}
         onSubmit={(title, content) => {
-            editBlogPost(id, title, content);
+            editBlogPost(id, title, content, () => navigation.pop());
         }} />
 };
 
