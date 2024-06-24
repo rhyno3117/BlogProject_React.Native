@@ -21,7 +21,7 @@ const blogReducer = (state, action) => {
             ];
         default:
             return state;
-    }
+    };
 };
 
 const addBlogPost = (dispatch) => {
